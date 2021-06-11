@@ -7,6 +7,8 @@ public class Muffin : MonoBehaviour
 {
     public int totalMuffins;
     public TMP_Text muffinText;
+    public RectTransform[] spinLight;
+    public float[] spinLightSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,10 @@ public class Muffin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for(int indx = 0; indx < spinLight.Length; indx++)
+        {
+            spinLight[indx].Rotate(0, 0, spinLightSpeed[indx] * Time.deltaTime);
+        }
         
     }
 

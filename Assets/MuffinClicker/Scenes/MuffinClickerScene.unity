@@ -322,6 +322,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalMuffins: 0
   muffinText: {fileID: 1511411840}
+  spinLight:
+  - {fileID: 1594047314}
+  - {fileID: 28660337}
+  spinLightSpeed:
+  - 40
+  - -40
 --- !u!850595691 &478489399
 LightingSettings:
   m_ObjectHideFlags: 0
