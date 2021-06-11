@@ -328,6 +328,7 @@ MonoBehaviour:
   spinLightSpeed:
   - 40
   - -40
+  noOfMuffins: 1
 --- !u!850595691 &478489399
 LightingSettings:
   m_ObjectHideFlags: 0
