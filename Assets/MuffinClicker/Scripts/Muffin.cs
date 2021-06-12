@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
+
 
 public class Muffin : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class Muffin : MonoBehaviour
     public float[] spinLightSpeed;
     public int noOfMuffins;
     public int noOfClicks;
+    public RectTransform muffinButton;
+    
  
     // Start is called before the first frame update
     void Start()
@@ -57,6 +61,14 @@ public class Muffin : MonoBehaviour
     {
         noOfClicks++;
         totalMuffins += noOfMuffins;
+
+        muffinText.color = Color.yellow;
+        muffinText.DOColor(Color.white, 1f);
+
+        //Grow the muffin slightly..
+        muffinButton.DOPunchScale(Vector3.one * Random.Range(0.0f,0.5f), 0.5f);
+
+        
         UpdateUI();
     }
 
@@ -65,9 +77,11 @@ public class Muffin : MonoBehaviour
     /// </summary>
     public void OnCriticalClick()
     {
+
         //Extra Spicy Challenge
-        float OnePercentOfClicks = 1.0f / noOfClicks;
-        if (OnePercentOfClicks == 0.01f)
+        //float OnePercentOfClicks = 1.0f / noOfClicks;
+        float OnePercentOfClicks = (float)System.Math.Round(Random.value, 2);
+         if (OnePercentOfClicks == 0.01f)
         {
             totalMuffins += 10 * noOfMuffins;
             UpdateUI();

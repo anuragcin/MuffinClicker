@@ -330,6 +330,7 @@ MonoBehaviour:
   - -40
   noOfMuffins: 1
   noOfClicks: 0
+  muffinButton: {fileID: 829400011}
 --- !u!850595691 &478489399
 LightingSettings:
   m_ObjectHideFlags: 0
