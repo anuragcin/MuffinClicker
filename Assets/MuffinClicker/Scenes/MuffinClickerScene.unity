@@ -329,8 +329,9 @@ MonoBehaviour:
   - 40
   - -40
   noOfMuffins: 1
-  noOfClicks: 0
   muffinButton: {fileID: 829400011}
+  muffinsPerClick: 1
+  floatingTextPrefab: {fileID: 1830297683697775921, guid: 91df3c9f714705b41a89f56f7a7dcd7b, type: 3}
 --- !u!850595691 &478489399
 LightingSettings:
   m_ObjectHideFlags: 0
